@@ -1,9 +1,11 @@
 pipeline {
     agent any
+    environment {
+        PATH = "${env.PATH}:/usr/bin/python3" 
+    }
     stages {
 	stage('Install Dependencies'){
 	    steps {
-	        sh 'python3 -m venv venv'
 	        sh 'source venv/bin/activate'
 	        sh 'pip install pandas'
 	    }	
