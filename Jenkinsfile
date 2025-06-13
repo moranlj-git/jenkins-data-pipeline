@@ -15,7 +15,7 @@ pipeline {
                 script {
                     // Choisissez la commande en fonction de votre script
 		    sh 'source venv/bin/activate'
-                    sh 'python data_analysis.py' // Exécuter le script Python
+                    sh 'python3 data_analysis.py' // Exécuter le script Python
                 }
             }
         }
