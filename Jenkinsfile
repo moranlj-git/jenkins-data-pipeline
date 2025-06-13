@@ -10,13 +10,10 @@ pipeline {
 	        sh 'pip install pandas'
 	    }	
 	}
-        stage('Build') {
+        stage('Run Data_Analysis') {
             steps {
-                script {
-                    // Choisissez la commande en fonction de votre script
-		    sh 'source venv/bin/activate'
-                    sh 'python3 data_analysis.py' // Exécuter le script Python
-                }
+		sh 'source venv/bin/activate'
+                sh 'python3 data_analysis.py' // Exécuter le script Python
             }
         }
     }
